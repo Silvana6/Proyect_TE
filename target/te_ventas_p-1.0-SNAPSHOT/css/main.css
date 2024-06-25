@@ -1,0 +1,77 @@
+.title-t2 h1 {
+    color: #e830ce;
+    margin-left: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-content-txt {
+    margin: 15px;
+    margin-right: 80px;
+}
+
+.datos-box {
+    margin: 20px;
+    margin-bottom: 80px;
+}
+
+.datos-box h2 {
+    color: #f82d97;
+    font-weight: 700;
+}
+
+.datos-box p {
+    color: wheat;
+    font-size: 20px;
+}
+
+.price-box {
+    margin: 20px;
+}
+
+.price-box h3{
+    color: gainsboro;
+    font-weight: 800;
+    text-align: center;
+}
+
+.box-content-img {
+    margin: 0 10px;
+    margin-left: 60px;
+}
+
+.box-content-img img {
+    border-radius: 50%;
+    width: 500px;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .title-t2 h1 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+    
+    .box-content-txt {
+        margin-right: 0;
+    }
+    
+    .box-content-img {
+        margin-left: 0;
+    }
+    
+    .box-content-img img {
+        width: 250px;
+        text-align: center;
+    }
+}
