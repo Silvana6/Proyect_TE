@@ -120,6 +120,14 @@ th, td {
     font-weight: 800;
 }
 
+.img-clickable {
+    cursor: pointer;
+}
+
+.modal-dialog-centered {
+    max-width: 90%;
+}
+
 @media (max-width: 600px){
     .title-t h1,
     .title-t3 h1{
@@ -140,16 +148,19 @@ th, td {
     .create-btn img {
         width: 20px;
     }
-    
+
     .table thead th {
         font-size: 20px;
     }
-    
+
     .table tbody td {
         font-size: 15px;
     }
-    
+
     .td-img #img {
         width: 40px;
+    }
+    .img-thumbnail {
+        max-width: 100px;
     }
 }

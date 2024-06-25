@@ -54,8 +54,6 @@
 
         <div class="title-t3">
             <h1>
-                <c:if test="${categoria.id == null}"></c:if>
-                <c:if test="${categoria.id != null}"></c:if>
                 Nueva Categoria
             </h1>
         </div>

@@ -78,7 +78,7 @@
                 <tbody class="td-img">
                 <c:forEach var="item" items="${productos}">
                     <tr>
-                        <td><img src="${pageContext.request.contextPath}/${item.imagen}" alt="p" id="img"/></td>
+                        <td><img src="${pageContext.request.contextPath}/${item.imagen}" alt="p" id="img" class="img-thumbnail img-clickable" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image-src="${pageContext.request.contextPath}/${item.imagen}" /></td> 
                         <td>${item.nombre}</td>
                         <td>${item.descripcion}</td>
                         <td>${item.categoriaId.nombre}</td>
@@ -90,7 +90,32 @@
                 </tbody>
             </table>
         </div>
+        
+        <!-- Modal para agrandar imagen -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Imagen del producto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" class="img-fluid" alt="Producto">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            var imageModal = document.getElementById('imageModal');
+            imageModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget;
+                var imageSrc = button.getAttribute('data-bs-image-src');
+                var modalImage = document.getElementById('modalImage');
+                modalImage.src = imageSrc;
+            });
+        </script>
     </body>
 </html>
