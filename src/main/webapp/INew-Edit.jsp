@@ -53,7 +53,7 @@
 
         <!-- CONTENIDO DE PAGINA -->
 
-        <div class="title-t">
+        <div class="title-t3">
             <h1>
                 <c:if test="${inventario.id != null}"></c:if>
                 Editar Inventario
