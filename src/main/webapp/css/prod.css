@@ -1,0 +1,146 @@
+.transparent-bg {
+    background-color: transparent !important;
+}
+
+.transparent-bg th,
+.transparent-bg td {
+    background-color: transparent !important;
+}
+
+.create-btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 150px;
+    padding: 15px 10px;
+    border: 1px solid #e7e500;
+    border-radius: 15px;
+    color: #e7e500;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+}
+
+.create-btn img {
+    width: 30px;
+}
+
+.btn.btn-primary {
+    color: #e0e0e0;
+    background-color: #390517;
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    color: #e0e0e0;
+    background-color: #72383d;
+}
+
+.col-form-label {
+    color: black;
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 40px;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+.table thead {
+    border-bottom: 2px solid #e7c500;
+}
+
+.table thead th {
+    text-align: center;
+    color: #f82d97;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.table tbody td {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid #1f2124;
+}
+
+.icon img {
+    cursor: pointer;
+    transition: scale 0.2s ease;
+    object-fit: cover;
+}
+
+.icon img:hover {
+    transform: scale(1.5);
+}
+
+.form-label {
+    color: #2ef8a0;
+    font-size: 20px;
+}
+
+.td-img #img {
+    border-radius: 50%;
+    width: 70px;
+}
+
+.td-img {
+    align-items: center;
+    justify-content: center;
+}
+
+#nombre, #descripcion, #categoria, #precio,
+#imagen {
+    background: transparent;
+    border: 1px solid #e7c500;
+    color: white;
+}
+
+#categoria {
+    background: black;
+    color: white;
+}
+
+.title-t h1 {
+    color: #e830ce;
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+@media (max-width: 600px){
+    .title-t h1 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .create-btn {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+
+    .create-btn img {
+        width: 20px;
+    }
+    
+    .table thead th {
+        font-size: 20px;
+    }
+    
+    .table tbody td {
+        font-size: 15px;
+    }
+    
+    .td-img #img {
+        width: 40px;
+    }
+}
