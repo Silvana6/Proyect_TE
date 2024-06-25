@@ -54,35 +54,33 @@
 
         <!-- CONTENIDO DE PAGINA -->
 
-        <div class="title-t">
+        <div class="title-t3">
             <h1>
-                <c:if test="${producto.id == null}"></c:if>
-                <c:if test="${producto.id != null}"></c:if>
-                    Nuevo Producto
-                </h1>
-            </div>
+                Nuevo Producto
+            </h1>
+        </div>
 
-            <div class="container">
-                <form class="row g-4">
+        <div class="container">
+            <form class="row g-4" action="ProductoServlet" method="post" enctype="multipart/form-data">
                 <c:if test="${producto.id == null}"><input type="hidden" name="id" value="0"> </c:if>
                 <c:if test="${producto.id != null}"><input type="hidden" name="id" value="${producto.id}"> </c:if>
 
                     <div class="col-md-6">
-                        <label for="nombre" class="form-label">Nombre</label>
+                        <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" value="${producto.nombre}" required>
                 </div>
                 <div class="col-md-6">
                     <label for="imagen" class="form-label">Imagen de producto:</label>
-                    <input type="file" class="form-control" id="imagen" name="imagen" value="${item.imagen}" required>
+                    <input type="file" class="form-control" id="imagen" name="imagen">
                 </div>
                 <div class="col-12">
-                    <label for="descipcion" class="form-label">Descripción:</label>
+                    <label for="descripcion" class="form-label">Descripción:</label>
                     <textarea class="form-control" id="descripcion" name="descripcion" rows="5">${producto.descripcion}</textarea>
                 </div>
                 <div class="col-md-6">
                     <label for="categoria" class="form-label">Categoria:</label>
-                    <select id="categoria" name="categoriaId" class="form-select select-items">
-                        <option>Seleccione...</option>
+                    <select id="categoria" name="categoria_id" class="form-select select-items">
+                        <option value="">Seleccione...</option>
                         <c:forEach var="item" items="${categorias}">
                             <option value="${item.id}" ${item.id == producto.categoriaId.id ? 'selected' : ''}>
                                 ${item.nombre}
@@ -92,7 +90,7 @@
                 </div>
                 <div class="col-md-6">
                     <label for="precio" class="form-label">Precio:</label>
-                    <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="${producto.precio}" placeholder="Bs."  required min="1">
+                    <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="${producto.precio}" placeholder="Bs." required min="1">
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">GUARDAR</button>

@@ -53,15 +53,14 @@
 
         <!-- CONTENIDO DE PAGINA -->
 
-        <div class="title-t">
+        <div class="title-t3">
             <h1>
-                <c:if test="${inventario.id != null}"></c:if>
                 Editar Inventario
             </h1>
         </div>
 
         <div class="container">
-            <form class="row g-4">                
+            <form class="row g-4" action="InventarioServlet" method="post">                
                 <div class="col-md-4">
                     <label for="cantidad" class="form-label">Cantidad:</label>
                     <input type="number" class="form-control" id="cantidad" name="cantidad" value="${inventario.cantidad}" required min="0">
