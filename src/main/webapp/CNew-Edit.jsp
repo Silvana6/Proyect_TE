@@ -52,7 +52,7 @@
 
         <!-- CONTENIDO DE PAGINA -->
 
-        <div class="title-t">
+        <div class="title-t3">
             <h1>
                 <c:if test="${categoria.id == null}"></c:if>
                 <c:if test="${categoria.id != null}"></c:if>
