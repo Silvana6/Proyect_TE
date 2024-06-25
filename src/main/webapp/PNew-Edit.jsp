@@ -63,7 +63,7 @@
             </div>
 
             <div class="container">
-                <form class="row g-4">
+                <form class="row g-4" action="ProductoServlet" method="post">
                 <c:if test="${producto.id == null}"><input type="hidden" name="id" value="0"> </c:if>
                 <c:if test="${producto.id != null}"><input type="hidden" name="id" value="${producto.id}"> </c:if>
 
